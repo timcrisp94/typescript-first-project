@@ -19,7 +19,7 @@ type Listener<T> = (items: T[]) => void;
 
 class State<T> {
   protected listeners: Listener<T>[] = [];
-
+  
   addListener(listenerFn: Listener<T>) {
     this.listeners.push(listenerFn);
   }
@@ -146,7 +146,7 @@ abstract class Component<T extends HTMLElement, U extends HTMLElement> {
 
   private attach(insertAtBeginning: boolean) {
     this.hostElement.insertAdjacentElement(
-      insertAtBeginning ? 'afterbegin' : 'beforeend',
+      insertAtBeginning ? 'afterbegin' : 'beforeend', 
       this.element
     );
   }
