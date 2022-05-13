@@ -23,16 +23,19 @@
       <li>Add bang operator to document.getElementById('project-input') because we know this will never be null; add "as HTMLTemplateElement" so TypeScript knows what type of element</li>
       <li>hostElement is of type HTMLDivElement -- follow same procedures to hostElement within the constructor method</li>
       <li>create importedNode variable in constructor function</li>
-      <li>add private method attach() to ProjectInput</li>
+      <li>add private method attach() to ProjectInput; call in constructor</li>
       <li>create element variable of type HTMLFormElement; use this.element to reference importedNode, giving attach method access to importedNode</li>
       <li>instantiate ProjectInput class with const prjInput()</li>
       <li>Form has been rendered</li>
     </ul>
     <h2>Module 4 - Interacting with Dom Elements</h2>
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>inside the constructor, set this.element.id = 'user-input' to link styling to user-input field</li>
+      <li>access form inputs, store as properties by adding titleInputElement, descriptionInputElement, and peopleInputElement variables to class; use querySelector to access HTML elements</li>
+      <li>add private configure() to add event listener to submit</li>
+      <li>add submitHandler method</li>
+      <li>call configure method in constructor</li>
+      <li>add this.submitHandler.bind(this) parameter to configure's event listener so submitHandler understands this.titleInputElement.value</li>
     </ul>
     <h2>Module 1</h2>
     <ul>
